@@ -1,0 +1,46 @@
+{
+  "skills": [
+    {
+      "id": "gmail_connector",
+      "name": "Gmail Connector",
+      "version": "v1.1.2",
+      "description": "本機整合 Google Mail API，支援自動分類信件、起草回覆與排程發信，保有安全憑證隔離。",
+      "installCmd": "crab install gmail"
+    },
+    {
+      "id": "scheduler_pro",
+      "name": "Scheduler Pro",
+      "version": "v1.0.0",
+      "description": "解鎖複雜 DAG 任務工作流排程。支援多步驟錯誤重試、變數鏈傳遞與事件驅動監聽器。",
+      "installCmd": "crab install scheduler-pro"
+    },
+    {
+      "id": "smart_home_link",
+      "name": "Smart Home Link",
+      "version": "v0.9.8",
+      "description": "對接本機 Home Assistant 平台，支援利用對話控制智慧家電，並依據排程自動執行場景。",
+      "installCmd": "crab install smart-home"
+    },
+    {
+      "id": "calendar_sync",
+      "name": "Calendar Sync",
+      "version": "v1.0.5",
+      "description": "串接 Google 日曆與 Outlook 日曆，自動同步日程並能透過 RAG 提供會前背景簡報。",
+      "installCmd": "crab install calendar"
+    },
+    {
+      "id": "local_vision",
+      "name": "Local Vision Analyzer",
+      "version": "v0.8.2",
+      "description": "調用本機相機進行 YOLO 目標偵測與即時影像辨識，並將事件推送至排程核心執行反應動作。",
+      "installCmd": "crab install vision"
+    },
+    {
+      "id": "system_terminal",
+      "name": "Terminal Controller",
+      "version": "v1.0.2",
+      "description": "允許 Agent 在本機安全沙盒內執行終端機指令，執行打包、專案建置與日常檔案管理任務。",
+      "installCmd": "crab install terminal"
+    }
+  ]
+}

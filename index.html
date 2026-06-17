@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="head.title">ButlerCrab — 舊電腦重生成為安全隱私的本地家庭總管 AI</title>
+  <meta name="description"
+    content="ButlerCrab 讓您家中的舊桌機與舊筆電重生成為 24 小時運行的安全家庭總管 AI，守護居家安全、自動打理日常瑣事，100% 本地運行保護全家隱私。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M38 72 C38 48, 90 48, 90 72 C90 85, 38 85, 38 72 Z" fill="#ef4444" />
+          <path d="M52 46 V50" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+          <path d="M76 46 V50" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+          <circle cx="52" cy="42" r="5" fill="#ffffff" />
+          <circle cx="76" cy="42" r="5" fill="#ffffff" />
+          <circle cx="52" cy="42" r="2" fill="#000000" />
+          <circle cx="76" cy="42" r="2" fill="#000000" />
+          <path d="M34 54 C18 46, 24 22, 42 36 C36 42, 38 48, 34 54 Z" fill="#ef4444" />
+          <path d="M94 54 C110 46, 104 22, 86 36 C92 42, 90 48, 94 54 Z" fill="#ef4444" />
+          <!-- Butler Bowtie -->
+          <path d="M64 83 L50 75 L50 91 Z" fill="#0f172a" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
+          <path d="M64 83 L78 75 L78 91 Z" fill="#0f172a" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
+          <rect x="60" y="79" width="8" height="8" rx="2.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.5" />
+        </svg>
+        <span>ButlerCrab</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#features" id="nav-link-features" data-i18n="nav.features">功能特性</a>
+        <a href="#skills" id="nav-link-skills" data-i18n="nav.skills">技能市集</a>
+        <a href="https://github.com" target="_blank" id="nav-link-dev" data-i18n="nav.dev_docs">開發者文件</a>
+        <a href="https://github.com" target="_blank" id="nav-link-github">GitHub</a>
+        <div class="lang-selector-container">
+          <select id="lang-select" aria-label="選擇語言">
+            <option value="zh-TW">繁體中文</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="zh-CN">简体中文</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+        <button id="theme-toggle" aria-label="切換主題模式">
+          <!-- 太陽圖示 -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <!-- 月亮圖示 -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+        <a href="#download" class="btn btn-secondary nav-cta" id="nav-btn-download" data-i18n="nav.download">立即下載</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主視覺 Hero 區域 -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-container">
+      <div class="badge" id="hero-badge" data-i18n="hero.badge">ButlerCrab v1.0.0 正式發布</div>
+      <h1 id="hero-title" data-i18n="hero.title">家裡舊電腦重生成為<br><span class="gradient-text">全家群組隨身的 AI 智慧管家</span></h1>
+      <p class="hero-subtitle" id="hero-subtitle" data-i18n="hero.subtitle">
+        您的舊桌機、舊筆電就是 24 小時智慧大總管。無需昂貴顯示卡，免訂閱費，在保障 100% 隱私的安全防線下，為全家人守護居家安全、自動打理日常瑣事。
+      </p>
+
+      <div class="cta-group">
+        <a href="#download" class="btn btn-primary" id="hero-btn-download" data-i18n="hero.btnDownload">免費下載安裝包</a>
+        <a href="https://github.com" target="_blank" class="btn btn-outline" id="hero-btn-github">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path
+              d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+          </svg>
+          <span data-i18n="hero.btnGithub">GitHub 原始碼</span>
+        </a>
+      </div>
+      <p class="cta-hint" data-i18n="hero.ctaHint">※ 像安裝一般軟體一樣簡單，3 分鐘內完成設定，免敲任何指令</p>
+    </div>
+  </section>
+
+  <!-- 功能特性 Section -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="features.title">強大的本地 AI 功能特性</h2>
+        <p data-i18n="features.desc">為追求極致隱私與自動化生產力的使用者而設計</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- 卡片 1 -->
+        <div class="feature-card" id="feature-card-privacy">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f1.title">100% 本地與隱私優先</h3>
+          <p data-i18n="features.f1.desc">所有對話、知識庫與排程任務皆在您的本地設備處理。零遙測數據上傳，無須擔心敏感個資與商業機密外洩。</p>
+        </div>
+
+        <!-- 卡片 2 -->
+        <div class="feature-card" id="feature-card-graphrag">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f2.title">超強記性，像家人一樣懂你</h3>
+          <p data-i18n="features.f2.desc">自動記住您說過的每一句話與家庭習慣，不需要每次重複解釋，對話越久越有默契。</p>
+        </div>
+
+        <!-- 卡片 3 -->
+        <div class="feature-card" id="feature-card-scheduler">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f3.title">跨平台對話與智慧自動化</h3>
+          <p data-i18n="features.f3.desc">支援 LINE、Telegram、WhatsApp、Discord 等 11 種常用通訊軟體，出門在外傳訊即可隨身控管總管。搭配獨家工具路由技術，可節省 80% 以上 Token 消耗，使本地推理速度提升 5 倍，且省電省錢！</p>
+        </div>
+
+        <!-- 卡片 4 -->
+        <div class="feature-card" id="feature-card-webui">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="2" y1="10" x2="22" y2="10" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f4.title">直覺式 Web UI 控制台</h3>
+          <p data-i18n="features.f4.desc">提供精緻的響應式 Web 操作介面。支援輕量級極簡設定，輕鬆配置家庭成員、智慧連動與下載擴充技能。</p>
+        </div>
+
+        <!-- 卡片 5 -->
+        <div class="feature-card" id="feature-card-multiuser">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f5.title">多用戶工作空間隔離</h3>
+          <p data-i18n="features.f5.desc">具備完善的用戶管理機制。在同台本機設備上，不同使用者擁有獨立的授權憑證、任務目錄與歷史對話隔離空間。</p>
+        </div>
+
+        <!-- 卡片 6 -->
+        <div class="feature-card" id="feature-card-smarthome">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3 data-i18n="features.f6.title">舊視訊鏡頭變身隱私安全警報器</h3>
+          <p data-i18n="features.f6.desc">免買訂閱制雲端攝影機，利用家裡舊鏡頭進行安全警戒，發現陌生人徘徊時即時傳送 LINE/Telegram 警報。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 終端機模擬操作展示區 -->
+  <section id="demo-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="demo.title">親自體驗 Web UI 控制台</h2>
+        <p data-i18n="demo.subtitle">在下方模擬控制面板中點選切換分頁（總覽、即時對話、安全監控等），親自感受本地 AI 助理的流暢操作。</p>
+      </div>
+      <div class="window-frame">
+        <div class="window-header">
+          <div class="window-buttons">
+            <span class="win-btn win-close"></span>
+            <span class="win-btn win-minimize"></span>
+            <span class="win-btn win-maximize"></span>
+          </div>
+          <div class="window-title">ButlerCrab Web Console</div>
+        </div>
+        <div class="window-body">
+          <!-- Left Sidebar -->
+          <div class="webui-sidebar">
+            <div class="webui-sidebar-menu">
+              <div class="webui-sidebar-item active" data-tab="overview" title="Overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="9"></rect>
+                  <rect x="14" y="3" width="7" height="5"></rect>
+                  <rect x="14" y="12" width="7" height="9"></rect>
+                  <rect x="3" y="16" width="7" height="5"></rect>
+                </svg>
+                <span data-i18n="mockup.sidebar.overview">總覽</span>
+              </div>
+              <div class="webui-sidebar-item" data-tab="chat" title="Chat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span data-i18n="mockup.sidebar.chat">即時對話</span>
+              </div>
+              <div class="webui-sidebar-item" data-tab="skills" title="Skills Hub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span data-i18n="mockup.sidebar.skills">技能市集</span>
+              </div>
+              <div class="webui-sidebar-item" data-tab="scheduler" title="Task Scheduler">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span data-i18n="mockup.sidebar.scheduler">任務排程</span>
+              </div>
+              <div class="webui-sidebar-item" data-tab="cameras" title="Smart Cameras">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 7l-7 5 7 5V7z"></path>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <span data-i18n="mockup.sidebar.cameras">安全監控</span>
+              </div>
+              <div class="webui-sidebar-item" data-tab="settings" title="Settings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                <span data-i18n="mockup.sidebar.settings">系統設定</span>
+              </div>
+            </div>
+            <div class="webui-sidebar-profile">
+              <div class="profile-avatar">FC</div>
+              <div class="profile-info">
+                <div class="profile-name">father</div>
+                <div class="profile-role" data-i18n="mockup.profile.admin">管理員</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Panel -->
+          <div class="webui-main">
+            <!-- Header -->
+            <div class="webui-header">
+              <div class="webui-header-title">
+                <span id="webui-active-tab-title" data-i18n="mockup.sidebar.overview">總覽</span>
+                <span class="webui-header-model" data-i18n="mockup.header.model">進階智慧大腦 (Ollama)</span>
+              </div>
+              <div class="webui-header-actions">
+                <button class="webui-btn webui-btn-outline" id="webui-refresh-btn">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span data-i18n="mockup.header.refresh">重新整理</span>
+                </button>
+                <button class="webui-btn webui-btn-primary" id="webui-restart-btn">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.18 9A6 6 0 1 0 14 16.18V21M14 3v4"/></svg>
+                  <span data-i18n="mockup.header.restart">重啟服務</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="webui-body">
+              
+              <!-- Tab: Overview -->
+              <div class="webui-tab-content active" id="tab-overview">
+                <div class="overview-grid">
+                  <div class="overview-card">
+                    <div class="card-header">
+                      <span class="card-title" data-i18n="mockup.overview.tokens">今日 Token 用量</span>
+                      <span class="card-icon">⚡</span>
+                    </div>
+                    <div class="card-value">31,530</div>
+                    <div class="card-desc" data-i18n="mockup.overview.tokens_sub">本週累計：31,530</div>
+                  </div>
+                  <div class="overview-card">
+                    <div class="card-header">
+                      <span class="card-title" data-i18n="mockup.overview.skills">已載入技能</span>
+                      <span class="card-icon">🧩</span>
+                    </div>
+                    <div class="card-value">68 <span class="card-value-total">/ 81</span></div>
+                    <div class="card-desc" data-i18n="mockup.overview.skills_sub">已載入 68 項智慧生活技能</div>
+                  </div>
+                  <div class="overview-card">
+                    <div class="card-header">
+                      <span class="card-title">Telegram</span>
+                      <span class="card-icon">💬</span>
+                    </div>
+                    <div class="card-value"><span class="badge badge-green" data-i18n="mockup.overview.online">已啟用</span></div>
+                    <div class="card-desc" data-i18n="mockup.overview.telegram_sub">長輪詢模式執行中</div>
+                  </div>
+                  <div class="overview-card">
+                    <div class="card-header">
+                      <span class="card-title">LINE</span>
+                      <span class="card-icon">🟢</span>
+                    </div>
+                    <div class="card-value"><span class="badge badge-gray" data-i18n="mockup.overview.disabled">未啟用</span></div>
+                    <div class="card-desc"><a href="#" class="card-link" data-i18n="mockup.overview.line_sub">前往 Channels 設定</a></div>
+                  </div>
+                </div>
+
+                <div class="overview-row-2">
+                  <div class="dashboard-panel panel-chats">
+                    <div class="panel-header">
+                      <span class="panel-title" data-i18n="mockup.overview.recent_chats">近期對話</span>
+                      <button class="webui-btn webui-btn-outline webui-btn-sm">+ <span data-i18n="mockup.overview.new_chat">開啟對話</span></button>
+                    </div>
+                    <div class="panel-body">
+                      <div class="empty-state">
+                        <span class="empty-icon">💬</span>
+                        <span class="empty-text" data-i18n="mockup.overview.no_history">尚無歷史對話記錄</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboard-panel panel-actions">
+                    <div class="panel-header">
+                      <span class="panel-title" data-i18n="mockup.overview.quick_actions">快速操作</span>
+                    </div>
+                    <div class="panel-body actions-list">
+                      <button class="action-btn-item">
+                        <span>💬</span>
+                        <span data-i18n="mockup.overview.new_chat">開啟對話</span>
+                      </button>
+                      <button class="action-btn-item">
+                        <span>👥</span>
+                        <span data-i18n="mockup.overview.manage_family">管理家庭成員</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: Chat -->
+              <div class="webui-tab-content" id="tab-chat">
+                <div class="webui-chat">
+                  <!-- User message -->
+                  <div class="chat-bubble chat-bubble-user terminal-line">
+                    <span data-i18n="terminal.userQuery">"檢查我明天的 Google 日曆，如果有會面，請在會前一小時通知我，並開啟智慧空調。"</span>
+                  </div>
+
+                  <!-- Butler response -->
+                  <div class="chat-bubble chat-bubble-agent terminal-line">
+                    <p style="font-weight: 600; margin-bottom: 8px;">ButlerCrab:</p>
+                    <p data-i18n="mockup.chat.response">已為您規劃並排定以下任務工作流：</p>
+                    
+                    <div class="agent-steps">
+                      <div class="step-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span data-i18n="mockup.chat.step1">查詢本地 Google Calendar 行程庫 (成功，尋獲 1 個會面「ButlerCrab Sync」)</span>
+                      </div>
+                      <div class="step-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span data-i18n="mockup.chat.step2">設定桌面通知排程 (成功，預定於 08:00 AM 發送提醒)</span>
+                      </div>
+                      <div class="step-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span data-i18n="mockup.chat.step3">調用 smart_home.turn_on_ac 工具 (設定溫度為 24°C，執行成功)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Active Status / Standby -->
+                  <div class="step-item pending terminal-line-active" style="padding-left: 10px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-right: 8px;">
+                      <line x1="12" y1="2" x2="12" y2="6"/>
+                      <line x1="12" y1="18" x2="12" y2="22"/>
+                      <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+                      <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                      <line x1="2" y1="12" x2="6" y2="12"/>
+                      <line x1="18" y1="12" x2="22" y2="12"/>
+                      <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+                      <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+                    </svg>
+                    <span data-i18n="terminal.listening" style="font-weight: 500;">ButlerCrab 已就緒，隨時待命...</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: Skills -->
+              <div class="webui-tab-content" id="tab-skills">
+                <div class="skills-hub-header">
+                  <p data-i18n="mockup.skills.desc">管理已安裝技能，或從市集安裝社群技能。技能說明將自動注入 AI 系統提示詞中。</p>
+                  <div class="skills-hub-actions">
+                    <span class="badge badge-accent" data-i18n="mockup.skills.installed">已安裝 (81)</span>
+                    <button class="webui-btn webui-btn-outline webui-btn-sm" data-i18n="mockup.skills.marketplace">技能市集</button>
+                  </div>
+                </div>
+                <div class="skills-hub-grid">
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">🔒</span>
+                        <span class="skill-card-name">1password</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.1password">串接 1Password CLI 進行單一登入與安全金鑰防護。</p>
+                    <span class="badge-tag tag-prompt">PROMPT</span>
+                  </div>
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">📝</span>
+                        <span class="skill-card-name">apple-notes</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.applenotes">讀取、建立與管理 macOS 本地備忘錄資料。</p>
+                    <span class="badge-tag tag-prompt">PROMPT</span>
+                  </div>
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-card-name">blogwatcher</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.blogwatcher">監聽指定的 RSS/Atom 訂閱源，自動摘要並推送通知。</p>
+                    <span class="badge-tag tag-prompt">PROMPT</span>
+                  </div>
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">🔊</span>
+                        <span class="skill-card-name">blucli</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.blucli">整合 BluOS 音響設備，調整音量與播放群組設定。</p>
+                    <span class="badge-tag tag-prompt">PROMPT</span>
+                  </div>
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">🧮</span>
+                        <span class="skill-card-name">calculator</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.calculator">執行本地的高級算術與複雜代數公式計算。</p>
+                    <div class="tag-row">
+                      <span class="badge-tag tag-builtin">BUILT-IN</span>
+                      <span class="badge-tag tag-tool">TOOL</span>
+                    </div>
+                  </div>
+                  <div class="skill-item-card">
+                    <div class="skill-card-top">
+                      <div class="skill-card-meta">
+                        <span class="skill-icon">📷</span>
+                        <span class="skill-card-name">camsnap</span>
+                      </div>
+                      <label class="switch-toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <p class="skill-card-desc" data-i18n="mockup.skills.camsnap">捕捉 RTSP/ONVIF 本地串流相機畫面作為 YOLO 輸入。</p>
+                    <span class="badge-tag tag-tool">TOOL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: Scheduler -->
+              <div class="webui-tab-content" id="tab-scheduler">
+                <div class="scheduler-container">
+                  <div class="scheduler-intro">
+                    <p data-i18n="mockup.scheduler.desc">設定本地端背景排程，在特定時間或滿足特定事件觸發條件時，自動喚醒 Agent 執行任務。</p>
+                  </div>
+                  <div class="scheduler-table">
+                    <div class="table-header">
+                      <span class="col-task" data-i18n="mockup.scheduler.col_task">排程工作名稱</span>
+                      <span class="col-trigger" data-i18n="mockup.scheduler.col_trigger">觸發機制</span>
+                      <span class="col-status" data-i18n="mockup.scheduler.col_status">運行狀態</span>
+                    </div>
+                    <div class="table-body">
+                      <div class="table-row">
+                        <span class="col-task">Google Calendar Sync</span>
+                        <span class="col-trigger" data-i18n="mockup.scheduler.every10">每 10 分鐘</span>
+                        <span class="col-status"><span class="badge badge-green" data-i18n="mockup.scheduler.active">進行中</span></span>
+                      </div>
+                      <div class="table-row">
+                        <span class="col-task">AC Morning Pre-cool</span>
+                        <span class="col-trigger" data-i18n="mockup.scheduler.monfri">週一至週五 08:00 AM</span>
+                        <span class="col-status"><span class="badge badge-green" data-i18n="mockup.scheduler.active">進行中</span></span>
+                      </div>
+                      <div class="table-row">
+                        <span class="col-task">Desktop Event Notifier</span>
+                        <span class="col-trigger" data-i18n="mockup.scheduler.event1hr">會面開始前 1 小時</span>
+                        <span class="col-status"><span class="badge badge-green" data-i18n="mockup.scheduler.active">進行中</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: Cameras -->
+              <div class="webui-tab-content" id="tab-cameras">
+                <div class="cameras-container">
+                  <div class="cameras-intro">
+                    <p data-i18n="mockup.cameras.desc">管理您家中的 IP 相機與 USB 鏡頭。所有電腦視覺辨識（如 OpenCV YOLO）皆於本地邊緣端運行，隱私憑證以 AES 加密鎖定於系統金鑰庫。</p>
+                    <div class="cameras-actions">
+                      <button class="webui-btn webui-btn-outline webui-btn-sm" data-i18n="mockup.cameras.register">手動註冊相機</button>
+                      <button class="webui-btn webui-btn-primary webui-btn-sm" data-i18n="mockup.cameras.scan">掃描區域網路</button>
+                    </div>
+                  </div>
+                  <div class="cameras-grid">
+                    <div class="camera-card">
+                      <div class="camera-feed-container feed-dark">
+                        <div class="play-btn">▶</div>
+                        <div class="edge-text" data-i18n="mockup.cameras.edge_text">本地晶片加速中</div>
+                        <div class="feed-resolution" data-i18n="mockup.cameras.feed_resolution">畫質：高畫質 1080p · USB 鏡頭</div>
+                      </div>
+                      <div class="camera-card-info">
+                        <div class="camera-name-row">
+                           <span class="camera-name" data-i18n="mockup.cameras.desktop">桌面</span>
+                           <span class="camera-id">1:0</span>
+                        </div>
+                        <div class="camera-meta-grid">
+                          <div>
+                            <span class="meta-label" data-i18n="mockup.cameras.protocol_label">連線協定</span>
+                            <span class="meta-val" data-i18n="mockup.cameras.protocol_val">本機影音連線</span>
+                          </div>
+                          <div>
+                            <span class="meta-label" data-i18n="mockup.cameras.protection">憑證防護</span>
+                            <span class="meta-val text-green" data-i18n="mockup.cameras.protection_val">🔒 已儲存於本機安全防護鎖中</span>
+                          </div>
+                        </div>
+                        <div class="camera-toggle-row">
+                          <label class="switch-toggle-sm">
+                            <input type="checkbox" checked>
+                            <span class="slider-sm"></span>
+                          </label>
+                          <span class="toggle-label" data-i18n="mockup.cameras.bg_guard">啟用背景警戒</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="camera-card">
+                      <div class="camera-feed-container">
+                        <img src="camera_preview.jpg" alt="NB Camera Feed" class="camera-feed-img" id="nb-camera-feed">
+                        <div class="feed-timestamp" id="camera-timestamp">2026-06-10 14:40:51</div>
+                        <div class="feed-live-badge">LIVE</div>
+                      </div>
+                      <div class="camera-card-info">
+                        <div class="camera-name-row">
+                          <span class="camera-name" data-i18n="mockup.cameras.nb">NB鏡頭</span>
+                          <span class="camera-id">0:0</span>
+                        </div>
+                        <div class="camera-meta-grid">
+                          <div>
+                            <span class="meta-label" data-i18n="mockup.cameras.protocol_label">連線協定</span>
+                            <span class="meta-val" data-i18n="mockup.cameras.protocol_val">本機影音連線</span>
+                          </div>
+                          <div>
+                            <span class="meta-label" data-i18n="mockup.cameras.protection">憑證防護</span>
+                            <span class="meta-val text-green" data-i18n="mockup.cameras.protection_val">🔒 已儲存於本機安全防護鎖中</span>
+                          </div>
+                        </div>
+                        <div class="camera-toggle-row">
+                          <label class="switch-toggle-sm">
+                            <input type="checkbox" checked>
+                            <span class="slider-sm"></span>
+                          </label>
+                          <span class="toggle-label" data-i18n="mockup.cameras.bg_guard">啟用背景警戒</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: Settings -->
+              <div class="webui-tab-content" id="tab-settings">
+                <div class="settings-container">
+                  <div class="settings-group">
+                    <div class="settings-group-title" data-i18n="mockup.settings.general">一般設定</div>
+                    <div class="settings-row">
+                      <div class="setting-info">
+                        <div class="setting-name" data-i18n="mockup.settings.device_name">裝置名稱</div>
+                        <div class="setting-desc" data-i18n="mockup.settings.device_name_desc">本機運行的 Agent 節點識別稱呼。</div>
+                      </div>
+                      <input type="text" class="settings-input" value="Butler-01">
+                    </div>
+                  </div>
+                  <div class="settings-group">
+                    <div class="settings-group-title" data-i18n="mockup.settings.model">本地 AI 模型配置</div>
+                    <div class="settings-row">
+                      <div class="setting-info">
+                        <div class="setting-name" data-i18n="mockup.settings.provider">預設推理引擎</div>
+                        <div class="setting-desc" data-i18n="mockup.settings.provider_desc">串接本地 Ollama 推理或雲端 API 端點。</div>
+                      </div>
+                      <select class="settings-select">
+                        <option value="ollama" data-i18n="mockup.settings.provider_local">本地免費推理 (Ollama)</option>
+                        <option value="google" selected data-i18n="mockup.settings.provider_cloud">進階雲端大腦 (Gemini)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 家庭生活場景 Section -->
+  <section id="scenarios">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="scenarios.title">AI 如何打理您的家庭生活？</h2>
+        <p data-i18n="scenarios.desc">無需學習繁瑣設定，用最直覺的日常場景，體驗未來智慧管家服務</p>
+      </div>
+      <div class="scenarios-grid">
+        <!-- 卡片一：給爸爸 (安全守護) -->
+        <div class="scenario-card">
+          <span class="scenario-badge badge-father" data-i18n="scenarios.card1.badge">給爸爸的安心防線</span>
+          <h3 data-i18n="scenarios.card1.title">舊筆電鏡頭變身「AI 防盜警報器」</h3>
+          <p data-i18n="scenarios.card1.desc">家裡閒置的舊電腦與鏡頭插上電，即可 24 小時偵測門口異狀。一旦發現陌生人徘徊，立刻發送 LINE/Telegram 警報給全家，完全不需要額外的月租監控費。</p>
+        </div>
+        <!-- 卡片二：給媽媽 (生活秘書) -->
+        <div class="scenario-card">
+          <span class="scenario-badge badge-mother" data-i18n="scenarios.card2.badge">給媽媽的貼心助手</span>
+          <h3 data-i18n="scenarios.card2.title">整合日程與家電的「家庭大管家」</h3>
+          <p data-i18n="scenarios.card2.desc">每天早晨出門前，主動為您播報天氣、確認家人行程，甚至能根據濕度偵測自動開啟除濕機。您只需動口，瑣事由 AI 為您串接打理。</p>
+        </div>
+        <!-- 卡片三：給全家 (隱私防護) -->
+        <div class="scenario-card">
+          <span class="scenario-badge badge-family" data-i18n="scenarios.card3.badge">給全家的隱私與隔離防線</span>
+          <h3 data-i18n="scenarios.card3.title">同一個群組對話，獨立的隱私空間</h3>
+          <p data-i18n="scenarios.card3.desc">全家共用同一個 LINE/Telegram 聊天群組時，管家會根據發言人身份（透過 /bind 綁定）自動切換到獨立的工作空間，爸爸存取不了媽媽的私密行程，實現完美的物理隔離。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Agent 對比 Section -->
+  <section id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="comparison.title">為什麼選擇 ButlerCrab？</h2>
+        <p data-i18n="comparison.desc">專為全家與群組設計，打破傳統個人 AI 助理的局限性</p>
+      </div>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th data-i18n="comparison.th_feature">功能特色</th>
+              <th data-i18n="comparison.th_personal">傳統個人 AI 助理</th>
+              <th class="highlight" data-i18n="comparison.th_butler">ButlerCrab 家庭總管</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-name" data-i18n="comparison.row1.name">服務對象與場景</td>
+              <td data-i18n="comparison.row1.personal">僅針對個人單一帳戶，無法多人協作</td>
+              <td class="highlight" data-i18n="comparison.row1.butler">專為家庭與群組設計，支援多人語意識別與任務綁定</td>
+            </tr>
+            <tr>
+              <td class="feature-name" data-i18n="comparison.row2.name">群組對話隱私</td>
+              <td data-i18n="comparison.row2.personal">共用帳密或群組中對話與隱私全部曝露</td>
+              <td class="highlight" data-i18n="comparison.row2.butler">共享同個通訊群組，個人工作空間與憑證獨立隔離</td>
+            </tr>
+            <tr>
+              <td class="feature-name" data-i18n="comparison.row3.name">運行與 API 成本</td>
+              <td data-i18n="comparison.row3.personal">多人獨立購買，且對話長度增加時 API 成本呈指數上升</td>
+              <td class="highlight" data-i18n="comparison.row3.butler">共用本機電腦算力，智慧路由技術節省 80% 以上 Token 消耗</td>
+            </tr>
+            <tr>
+              <td class="feature-name" data-i18n="comparison.row4.name">智慧家居連動</td>
+              <td data-i18n="comparison.row4.personal">無法原生控制本地家電，需額外租用雲端中轉服務</td>
+              <td class="highlight" data-i18n="comparison.row4.butler">內建 Home Assistant 橋接器，出門在外隨手發訊操控</td>
+            </tr>
+            <tr>
+              <td class="feature-name" data-i18n="comparison.row5.name">資料安全防線</td>
+              <td data-i18n="comparison.row5.personal">全部對話上傳雲端，面臨遙測與個資外洩風險</td>
+              <td class="highlight" data-i18n="comparison.row5.butler">100% 本地運行，機密金鑰存入系統底層安全憑證庫</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能市集 Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="skills.title">官方技能市集目錄</h2>
+        <p data-i18n="skills.desc">一鍵安裝，快速擴展您的 AI 助理能力</p>
+      </div>
+
+      <div class="skills-grid" id="skills-catalog">
+        <!-- 透過 JS 動態載入 registry.json 內容 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 下載 Section -->
+  <section id="download">
+    <div class="container download-container">
+      <div class="download-card">
+        <h2 data-i18n="download.title">立即開始使用 ButlerCrab</h2>
+        <p data-i18n="download.desc">本機運行，免除繁瑣設定。下載對應平台的安裝包即可開始體驗。</p>
+
+        <div class="download-platforms">
+          <a href="https://github.com" class="platform-btn" id="download-win">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M0 3.449L9.75 2.1v9.45H0V3.45zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.8 1.95L24 0v11.55H10.8V1.95zM10.8 12.45H24v11.55l-13.2-1.95v-9.6z" />
+            </svg>
+            <div>
+              <span data-i18n="download.span">下載適用於</span>
+              <strong data-i18n="download.win_label">Windows (.exe)</strong>
+            </div>
+          </a>
+
+          <a href="https://github.com" class="platform-btn" id="download-mac">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.2.67-2.92 1.49-.62.72-1.16 1.86-1.02 2.98 1.09.08 2.22-.6 2.95-1.41z" />
+            </svg>
+            <div>
+              <span data-i18n="download.span">下載適用於</span>
+              <strong data-i18n="download.mac_label">macOS (.dmg)</strong>
+            </div>
+          </a>
+        </div>
+
+        <!-- 彈性雙重運行模式與費用說明 (Pricing & Licensing Info) -->
+        <div class="download-info">
+          <h4 class="info-subtitle" data-i18n="download.info_pricing_subtitle">彈性的雙重運行模式與費用說明</h4>
+          
+          <div class="info-modes">
+            <div class="info-mode-card">
+              <span class="mode-badge local" data-i18n="download.mode_local_badge">本地模型模式</span>
+              <strong data-i18n="download.mode_local_title">0 訂閱費、0 API 費用</strong>
+              <p data-i18n="download.mode_local_desc">配合本地 Ollama 推理（如 Llama 3 或 Gemma），即便 24 小時常駐運作，ButlerCrab 也不會產生任何 AI 額外使用費，完全免費。</p>
+            </div>
+            
+            <div class="info-mode-card">
+              <span class="mode-badge cloud" data-i18n="download.mode_cloud_badge">雲端 API 模式</span>
+              <strong data-i18n="download.mode_cloud_title">按需自付 API 費用（Pay-as-you-go）</strong>
+              <p data-i18n="download.mode_cloud_desc">若選擇接入第三方雲端大模型（如 Gemini 或 OpenAI），費用由第三方平台按實際用量直接收取，ButlerCrab 平台本身不加收任何服務費用。</p>
+            </div>
+          </div>
+          
+          <div class="info-license-footer">
+            <p>
+              <strong data-i18n="download.info_license_title">授權聲明：</strong>
+              <span data-i18n="download.info_license_desc">本專案採用 BSL 1.1 授權，對個人、家庭與非商業用途完全免費且開放原始碼，商業用途請聯絡取得授權。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-name">ButlerCrab</span>
+        <p data-i18n="footer.desc">100% 本地運行的隱私優先 AI Agent 協作平台</p>
+      </div>
+      <div class="footer-copyright" data-i18n="footer.copyright">
+        &copy; 2026 QUARTIMES INC. 基於 BSL 1.1 授權協議釋出。
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

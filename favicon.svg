@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background Shield -->
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGrad)" filter="url(#glow)"/>
+  
+  <!-- Stylized Crab Carapace -->
+  <path d="M38 72 C38 48, 90 48, 90 72 C90 85, 38 85, 38 72 Z" fill="#ef4444" />
+  
+  <!-- Eyes -->
+  <path d="M52 46 V50" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+  <path d="M76 46 V50" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+  <circle cx="52" cy="42" r="5" fill="#ffffff" />
+  <circle cx="76" cy="42" r="5" fill="#ffffff" />
+  <circle cx="52" cy="42" r="2" fill="#000000" />
+  <circle cx="76" cy="42" r="2" fill="#000000" />
+  
+  <!-- Left Claw (Big Pincher) -->
+  <path d="M34 54 C18 46, 24 22, 42 36 C36 42, 38 48, 34 54 Z" fill="#ef4444" />
+  
+  <!-- Right Claw (Big Pincher) -->
+  <path d="M94 54 C110 46, 104 22, 86 36 C92 42, 90 48, 94 54 Z" fill="#ef4444" />
+  
+  <!-- Left Legs -->
+  <path d="M36 74 C24 76, 18 84, 14 92" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 80 C26 84, 20 92, 18 100" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Right Legs -->
+  <path d="M92 74 C104 76, 110 84, 114 92" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 80 C102 84, 108 92, 110 100" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Butler Bowtie -->
+  <!-- Left Wing -->
+  <path d="M64 83 L50 75 L50 91 Z" fill="#0f172a" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
+  <!-- Right Wing -->
+  <path d="M64 83 L78 75 L78 91 Z" fill="#0f172a" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
+  <!-- Center Knot -->
+  <rect x="60" y="79" width="8" height="8" rx="2.5" fill="#1e293b" stroke="#ffffff" stroke-width="1.5" />
+</svg>
