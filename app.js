@@ -15,6 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 const locales = {
   "zh-TW": {
+    "skills.distribution.bundled": "內建",
+    "skills.distribution.hosted": "免費",
+    "skills.distribution.commercial": "商業",
+    "permission.network_access": "網路連線存取",
+    "permission.local_storage": "本地端資料儲存",
+    "skills.card.view_details": "查看詳情 &rarr;",
+    "modal.install_guide_title": "如何安裝此技能？",
+    "modal.install_guide_desc": "本市集僅供功能展示與環境配置參考。如需安裝，請啟動您的 ButlerCrab 用戶端，至「設定」 > 「技能市集」中搜尋此技能並點擊一鍵安裝。",
+    "skills.promo.title": "豐富的 AI 技能市集",
+    "skills.promo.desc": "探索由官方與社群開發的各種擴充技能。包含金融記帳、自動化通知、智慧家居控制等，無縫升級您的智慧管家能力。",
+    "skills.promo.btn": "進入技能市集",
+    "skills.filter.all": "全部技能",
+    "skills.filter.finance": "金融理財",
+    "skills.filter.communication": "通訊通知",
+    "skills.filter.home_automation": "智慧家居",
+    "modal.permissions_title": "安全性權限需求",
+    "modal.env_title": "環境變數配置指引",
+    "modal.readme_title": "詳細說明文件 (README)",
+    "modal.copy_btn": "複製安裝指令",
+    "skills.einvoice_tracker.desc": "讀取財政部電子發票，自動匯入本地記帳系統並進行消費分析。",
+    "skills.notify.desc": "允許 Agent 主動推送重要訊息或警報通知至使用者的 Telegram、LINE 等通訊軟體。",
+    "skills.polymarket_private_client.desc": "使用 Polymarket 官方 Python SDK 進行實彈下單、取消訂單及查詢錢包持倉。需設定私鑰。",
+    "skills.polymarket_public_client.desc": "獲取 Polymarket 預測市場公開數據，包括熱門市場搜尋、即時價格與限價單簿深度。",
+    "skills.taiwan_stock.desc": "查詢台股上市櫃個股最新收盤與歷史行情資訊，輔助家庭財務規劃。",
+    "skills.yolo_config.desc": "調整與配置本地電腦視覺 YOLO 模型參數與辨識精細度級別（nano, small, medium, large）。",
     "head.title": "ButlerCrab — 舊電腦重生成為安全隱私的本地家庭總管 AI",
     "nav.features": "功能特性",
     "nav.skills": "技能市集",
@@ -51,7 +76,7 @@ const locales = {
     "download.github_span": "前往",
     "download.github_label": "GitHub 原始碼",
     "footer.desc": "100% 本地運行的隱私優先 AI Agent 協作平台",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. 本專案對個人與家庭使用者完全免費。基於 Business Source License 1.1 (BSL 1.1) 授權協議釋出，商業使用請聯絡取得授權。",
+    "footer.copyright": "© 2026 QUARTIMES INC. 本專案對個人與家庭使用者完全免費。基於 Business Source License 1.1 (BSL 1.1) 授權協議釋出，商業使用請聯絡取得授權。",
     
     // Skills
     "skills.gmail_connector.desc": "本地整合 Google Mail API，支援自動分類郵件、起草回覆與排程發信，保持安全憑證隔離。",
@@ -174,6 +199,31 @@ const locales = {
     "comparison.row5.butler": "100% 本地運行，機密金鑰存入系統底層安全憑證庫"
   },
   "en": {
+    "skills.distribution.bundled": "Bundled",
+    "skills.distribution.hosted": "Free",
+    "skills.distribution.commercial": "Commercial",
+    "permission.network_access": "Network Access",
+    "permission.local_storage": "Local Storage",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — Repurpose Old Computers into a Secure Local Family Butler AI",
     "nav.features": "Features",
     "nav.skills": "Skills Market",
@@ -210,7 +260,7 @@ const locales = {
     "download.github_span": "View on",
     "download.github_label": "GitHub Source",
     "footer.desc": "100% local-first privacy-focused AI Agent collaboration platform",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. 100% Free for personal and family use. Released under Business Source License 1.1 (BSL 1.1). Commercial use requires a commercial license。",
+    "footer.copyright": "© 2026 QUARTIMES INC. 100% Free for personal and family use. Released under Business Source License 1.1 (BSL 1.1). Commercial use requires a commercial license。",
     
     // Skills
     "skills.gmail_connector.desc": "Local Google Mail API integration. Supports automated categorization, draft drafting, and scheduling while isolating credentials.",
@@ -333,6 +383,31 @@ const locales = {
     "comparison.row5.butler": "100% local operation; credentials stored in secure local keyring"
   },
   "ja": {
+    "skills.distribution.bundled": "ビルトイン",
+    "skills.distribution.hosted": "無料",
+    "skills.distribution.commercial": "商用",
+    "permission.network_access": "ネットワークアクセス",
+    "permission.local_storage": "ローカルストレージ",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — 古いPCを安全でプライベートなローカル家庭用AI執事へ再生",
     "nav.features": "機能特性",
     "nav.skills": "スキルカタログ",
@@ -369,7 +444,7 @@ const locales = {
     "download.github_span": "移動する",
     "download.github_label": "GitHub ソースコード",
     "footer.desc": "100% ローカル運用のプライバシー優先 AI エージェント協調プラットフォーム",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. 個人および家庭での利用は完全に無料です。Business Source License 1.1 (BSL 1.1) ライセンスの下で提供されています。商用利用にはライセンスが必要です。",
+    "footer.copyright": "© 2026 QUARTIMES INC. 個人および家庭での利用は完全に無料です。Business Source License 1.1 (BSL 1.1) ライセンスの下で提供されています。商用利用にはライセンスが必要です。",
     
     // Skills
     "skills.gmail_connector.desc": "ローカル Google Mail API 連携。認証情報を隔離した状態で、メールの自動分類、下書き作成、送信を実行。",
@@ -492,6 +567,31 @@ const locales = {
     "comparison.row5.butler": "100% ローカル実行。認証情報はローカル OS の安全な Keyring に隔離保存。"
   },
   "zh-CN": {
+    "skills.distribution.bundled": "内建",
+    "skills.distribution.hosted": "免费",
+    "skills.distribution.commercial": "商业",
+    "permission.network_access": "网络连接访问",
+    "permission.local_storage": "本地端数据存储",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — 旧电脑重生成为安全隐私的本地家庭总管 AI",
     "nav.features": "功能特性",
     "nav.skills": "技能市场",
@@ -528,7 +628,7 @@ const locales = {
     "download.github_span": "前往",
     "download.github_label": "GitHub 源码",
     "footer.desc": "100% 本地运行的隐私优先 AI Agent 协作平台",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. 本项目对个人与家庭用户完全免费。基于 Business Source License 1.1 (BSL 1.1) 授权协议发布，商业使用请联系取得授权。",
+    "footer.copyright": "© 2026 QUARTIMES INC. 本项目对个人与家庭用户完全免费。基于 Business Source License 1.1 (BSL 1.1) 授权协议发布，商业使用请联系取得授权。",
     
     // Skills
     "skills.gmail_connector.desc": "本地集成 Google Mail API，支持自动分类邮件、起草回复与排程发信，保持安全凭证隔离。",
@@ -651,6 +751,28 @@ const locales = {
     "comparison.row5.butler": "100% 本地运行，机密金钥存入系统底层安全凭证库"
   },
   "ko": {
+    "permission.network_access": "네트워크 액세스",
+    "permission.local_storage": "로컬 스토리지",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — 프라이버시 우선 로컬 멀티 에이전트 협업 플랫폼",
     "nav.features": "기능 및 특징",
     "nav.skills": "스킬 레지스트리",
@@ -697,7 +819,7 @@ const locales = {
     "download.win_label": "Windows (.exe)",
     "download.mac_label": "Mac (.dmg)",
     "footer.desc": "100% 로컬에서 실행되는 개인정보 보호 중심 AI 에이전트 협업 플랫폼",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. BSL 1.1 라이선스 적용。",
+    "footer.copyright": "© 2026 QUARTIMES INC. BSL 1.1 라이선스 적용。",
     
     // Skills
     "skills.gmail_connector.desc": "로컬 Google Mail API 연동. 인증 정보가 격리된 상태에서 메일 자동 분류, 임시보관함 작성, 발송 예약 실행.",
@@ -739,6 +861,28 @@ const locales = {
     "comparison.row5.butler": "100% 로컬 동작, 자격 증명은 로컬 OS의 안전한 Keyring에 격리 저장"
   },
   "es": {
+    "permission.network_access": "Acceso a la red",
+    "permission.local_storage": "Almacenamiento local",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — Plataforma local de colaboración multiagente priorizando la privacidad",
     "nav.features": "Características",
     "nav.skills": "Catálogo de Habilidades",
@@ -785,7 +929,7 @@ const locales = {
     "download.win_label": "Windows (.exe)",
     "download.mac_label": "Mac (.dmg)",
     "footer.desc": "Plataforma local y priorizando la privacidad para la colaboración de agentes de IA",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. Lanzado bajo la licencia BSL 1.1。",
+    "footer.copyright": "© 2026 QUARTIMES INC. Lanzado bajo la licencia BSL 1.1。",
     
     // Skills
     "skills.gmail_connector.desc": "Integración local con Google Mail API. Permite categorización, borradores y envíos aislando las credenciales.",
@@ -827,6 +971,28 @@ const locales = {
     "comparison.row5.butler": "Operación 100% local; credenciales seguras en el keyring del sistema operativo local"
   },
   "de": {
+    "permission.network_access": "Netzwerkzugriff",
+    "permission.local_storage": "Lokaler Speicher",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — Lokale, datenschutzfreundliche Multi-Agenten-Plattform",
     "nav.features": "Features",
     "nav.skills": "Skills-Verzeichnis",
@@ -873,7 +1039,7 @@ const locales = {
     "download.win_label": "Windows (.exe)",
     "download.mac_label": "Mac (.dmg)",
     "footer.desc": "Lokale Multi-Agenten-Plattform mit Fokus auf Datensicherheit",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. Veröffentlicht unter BSL 1.1-Lizenz。",
+    "footer.copyright": "© 2026 QUARTIMES INC. Veröffentlicht unter BSL 1.1-Lizenz。",
     
     // Skills
     "skills.gmail_connector.desc": "Lokale Google Mail API-Integration. Automatisiert Kategorisierung und Entwürfe bei vollständiger Isolation der Credentials.",
@@ -915,6 +1081,28 @@ const locales = {
     "comparison.row5.butler": "100% lokaler Betrieb; Anmeldeinformationen im lokalen OS-Keyring gesichert."
   },
   "fr": {
+    "permission.network_access": "Accès réseau",
+    "permission.local_storage": "Stockage local",
+    "skills.card.view_details": "View Details &rarr;",
+    "modal.install_guide_title": "How to install this skill?",
+    "modal.install_guide_desc": "This catalog is for showcase and configuration reference only. To install, please open your ButlerCrab client, navigate to Settings > Marketplace, search for this skill, and click install.",
+    "skills.promo.title": "Rich AI Skills Marketplace",
+    "skills.promo.desc": "Explore various extension skills developed by official and community developers, including financial bookkeeping, automated notifications, smart home controls, and more.",
+    "skills.promo.btn": "Enter Skills Marketplace",
+    "skills.filter.all": "All Skills",
+    "skills.filter.finance": "Finance & Wealth",
+    "skills.filter.communication": "Communication",
+    "skills.filter.home_automation": "Smart Home",
+    "modal.permissions_title": "Required Security Permissions",
+    "modal.env_title": "Environment Variable Configuration Guide",
+    "modal.readme_title": "Detailed Documentation (README)",
+    "modal.copy_btn": "Copy Install Command",
+    "skills.einvoice_tracker.desc": "Track and import Taiwan Ministry of Finance e-invoices for home bookkeeping.",
+    "skills.notify.desc": "Allows the Agent to proactively push message or alert notifications to messaging channels.",
+    "skills.polymarket_private_client.desc": "Execute orders, cancel orders, and check wallet balance on Polymarket prediction markets. Private key required.",
+    "skills.polymarket_public_client.desc": "Retrieve public prediction market data from Polymarket, including search, mid-prices, and order book depth.",
+    "skills.taiwan_stock.desc": "Query real-time and historical close prices of Taiwan Stock Exchange (TWSE) stocks.",
+    "skills.yolo_config.desc": "Configure and manage parameters for local edge YOLO computer vision models.",
     "head.title": "ButlerCrab — Plateforme locale multi-agent axée sur la confidentialité",
     "nav.features": "Caractéristiques",
     "nav.skills": "Catalogue de Skills",
@@ -961,7 +1149,7 @@ const locales = {
     "download.win_label": "Windows (.exe)",
     "download.mac_label": "Mac (.dmg)",
     "footer.desc": "Plateforme locale et respectueuse de la vie privée pour la collaboration d'agents IA",
-    "footer.copyright": "&copy; 2026 QUARTIMES INC. Publié sous licence BSL 1.1。",
+    "footer.copyright": "© 2026 QUARTIMES INC. Publié sous licence BSL 1.1。",
     
     // Skills
     "skills.gmail_connector.desc": "Intégration locale de l'API Google Mail. Classement automatique, brouillons et envois isolant les identifiants.",
@@ -1230,48 +1418,156 @@ function updateCameraTime(el) {
 /* ==========================================================================
    5. 動態渲染技能市集 (Skills Catalog Renderer)
    ========================================================================== */
+let allSkills = [];
+let currentCategory = 'all';
+
 const fallbackSkills = [
   {
-    id: "gmail_connector",
-    name: "Gmail Connector",
-    version: "v1.1.2",
-    installCmd: "crab install gmail"
+    "id": "einvoice_tracker",
+    "name": "einvoice_tracker",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "讀取財政部電子發票，進行家庭記帳。",
+    "installCmd": "crab install einvoice_tracker",
+    "category": "finance",
+    "distribution": "hosted",
+    "stars": 89,
+    "downloads": 2310,
+    "permissions": ["local_storage", "network_access"],
+    "envConfig": [
+      {
+        "key": "E_INVOICE_API_KEY",
+        "required": true,
+        "type": "string",
+        "description": "台灣電子發票 API 金鑰"
+      }
+    ],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/einvoice_tracker/README.md"
   },
   {
-    id: "scheduler_pro",
-    name: "Scheduler Pro",
-    version: "v1.0.0",
-    installCmd: "crab install scheduler-pro"
+    "id": "notify",
+    "name": "notify",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "Allows the Agent to proactively push messages or notifications to the user's messaging channels (e.g., Telegram, LINE).",
+    "installCmd": "crab install notify",
+    "category": "communication",
+    "distribution": "bundled",
+    "stars": 342,
+    "downloads": 12450,
+    "permissions": ["local_storage", "network_access"],
+    "envConfig": [
+      {
+        "key": "TELEGRAM_BOT_TOKEN",
+        "required": false,
+        "type": "string",
+        "description": "Telegram 機器人 Token (發送通知用)"
+      }
+    ],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/notify/README.md"
   },
   {
-    id: "smart_home_link",
-    name: "Smart Home Link",
-    version: "v0.9.8",
-    installCmd: "crab install smart-home"
+    "id": "polymarket_private_client",
+    "name": "polymarket_private_client",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "使用 Polymarket 官方 Python SDK 進行實彈交易與帳戶管理。",
+    "installCmd": "crab install polymarket_private_client",
+    "category": "finance",
+    "distribution": "commercial",
+    "stars": 96,
+    "downloads": 1120,
+    "permissions": ["local_storage", "network_access"],
+    "envConfig": [
+      {
+        "key": "POLYMARKET_API_KEY",
+        "required": true,
+        "type": "string",
+        "description": "Polymarket API 金鑰"
+      },
+      {
+        "key": "POLYMARKET_PRIVATE_KEY",
+        "required": true,
+        "type": "string",
+        "description": "Polymarket 私鑰"
+      }
+    ],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/polymarket_private_client/README.md"
   },
   {
-    id: "calendar_sync",
-    name: "Calendar Sync",
-    version: "v1.0.5",
-    installCmd: "crab install calendar"
+    "id": "polymarket_public_client",
+    "name": "polymarket_public_client",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "讀取 Polymarket 預測市場的公開數據。",
+    "installCmd": "crab install polymarket_public_client",
+    "category": "finance",
+    "distribution": "commercial",
+    "stars": 78,
+    "downloads": 1850,
+    "permissions": ["local_storage", "network_access"],
+    "envConfig": [],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/polymarket_public_client/README.md"
   },
   {
-    id: "local_vision",
-    name: "Local Vision Analyzer",
-    version: "v0.8.2",
-    installCmd: "crab install vision"
+    "id": "taiwan_stock",
+    "name": "taiwan_stock",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "查詢台灣上市櫃股票之最新與歷史收盤行情、股價與基本交易資訊。",
+    "installCmd": "crab install taiwan_stock",
+    "category": "finance",
+    "distribution": "hosted",
+    "stars": 215,
+    "downloads": 8740,
+    "permissions": ["local_storage", "network_access"],
+    "envConfig": [
+      {
+        "key": "FINMIND_API_TOKEN",
+        "required": false,
+        "type": "string",
+        "description": "FinMind API 金鑰 (選填)"
+      }
+    ],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/taiwan_stock/README.md"
   },
   {
-    id: "system_terminal",
-    name: "Terminal Controller",
-    version: "v1.0.2",
-    installCmd: "crab install terminal"
+    "id": "yolo_config",
+    "name": "yolo_config",
+    "version": "1.0.0",
+    "author": "QUARTIMES INC.",
+    "description": "Manage YOLO edge computer vision model configuration scales (nano, small, medium, large).",
+    "installCmd": "crab install yolo_config",
+    "category": "home_automation",
+    "distribution": "bundled",
+    "stars": 128,
+    "downloads": 4820,
+    "permissions": ["local_storage"],
+    "envConfig": [],
+    "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/yolo_config/README.md"
   }
 ];
+
+function formatDownloads(num) {
+  if (num >= 1000) {
+    return (num / 1000).toFixed(1) + 'k';
+  }
+  return num;
+}
+
+function translateDistribution(dist, dict) {
+  if (dist === 'bundled') return dict['skills.distribution.bundled'] || 'Bundled';
+  if (dist === 'commercial') return dict['skills.distribution.commercial'] || 'Commercial';
+  return dict['skills.distribution.hosted'] || 'Free';
+}
 
 function renderSkillsCatalog() {
   const container = document.getElementById('skills-catalog');
   if (!container) return;
+
+  // Initialize filters and modals
+  initMarketplaceFilters();
+  initMarketplaceModal();
 
   fetch('registry.json')
     .then(response => {
@@ -1280,18 +1576,64 @@ function renderSkillsCatalog() {
     })
     .then(data => {
       if (data && data.skills) {
-        buildGrid(data.skills, container);
+        allSkills = data.skills;
       } else {
-        buildGrid(fallbackSkills, container);
+        allSkills = fallbackSkills;
       }
+      filterAndBuildGrid();
     })
     .catch(() => {
-      buildGrid(fallbackSkills, container);
+      allSkills = fallbackSkills;
+      filterAndBuildGrid();
     });
+}
+
+function initMarketplaceFilters() {
+  const filterBtns = document.querySelectorAll('.skills-filter .filter-btn');
+  if (filterBtns.length === 0) return;
+
+  // Remove existing listeners if any
+  filterBtns.forEach(btn => {
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+  });
+
+  // Re-fetch filters and attach click
+  const newFilterBtns = document.querySelectorAll('.skills-filter .filter-btn');
+  newFilterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      newFilterBtns.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentCategory = e.target.getAttribute('data-category');
+      filterAndBuildGrid();
+    });
+  });
+}
+
+function filterAndBuildGrid() {
+  const container = document.getElementById('skills-catalog');
+  if (!container) return;
+
+  const filtered = allSkills.filter(skill => {
+    if (currentCategory === 'all') return true;
+    return skill.category === currentCategory;
+  });
+
+  buildGrid(filtered, container);
 }
 
 function buildGrid(skills, container) {
   container.innerHTML = '';
+  const dict = locales[currentLang] || locales['en'];
+
+  if (skills.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+        <p>此類別尚無技能</p>
+      </div>
+    `;
+    return;
+  }
   
   skills.forEach(skill => {
     const card = document.createElement('div');
@@ -1299,8 +1641,20 @@ function buildGrid(skills, container) {
     card.id = `skill-card-${skill.id}`;
 
     const descKey = `skills.${skill.id}.desc`;
-    const dict = locales[currentLang];
     const localizedDesc = (dict && dict[descKey]) ? dict[descKey] : (skill.description || '');
+    const viewDetailsText = dict["skills.card.view_details"] || "查看詳情 &rarr;";
+
+    // Distribution tag style
+    const distText = translateDistribution(skill.distribution, dict);
+    let distBg = 'rgba(124, 58, 237, 0.1)';
+    let distColor = 'var(--accent)';
+    if (skill.distribution === 'hosted') {
+      distBg = 'rgba(16, 185, 129, 0.1)';
+      distColor = '#10b981';
+    } else if (skill.distribution === 'commercial') {
+      distBg = 'rgba(245, 158, 11, 0.1)';
+      distColor = '#f59e0b';
+    }
 
     card.innerHTML = `
       <div class="skill-header">
@@ -1308,35 +1662,224 @@ function buildGrid(skills, container) {
         <span class="skill-version">${skill.version}</span>
       </div>
       <p class="skill-desc">${localizedDesc}</p>
-      <div class="skill-install">
-        <span class="skill-cmd" id="cmd-${skill.id}">${skill.installCmd}</span>
-        <button class="copy-btn" id="btn-copy-${skill.id}" title="複製安裝指令" aria-label="複製安裝指令">
-          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-          </svg>
-        </button>
+      
+      <div class="skill-meta-stats" style="display: flex; gap: 12px; font-size: 13px; color: var(--text-muted); margin-top: 16px; align-items: center;">
+        <span class="stat-stars">⭐ ${skill.stars || 0}</span>
+        <span class="stat-downloads">📥 ${formatDownloads(skill.downloads || 0)}</span>
+        <span class="distribution-tag" style="margin-left: auto; font-size: 11px; padding: 2px 6px; border-radius: 4px; background: ${distBg}; color: ${distColor}; font-weight: 600;">
+          ${distText}
+        </span>
+      </div>
+
+      <div class="skill-footer-action" style="margin-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 12px;">
+        <span class="skill-more-link">${viewDetailsText}</span>
       </div>
     `;
 
-    container.appendChild(card);
+    // Click card opens detail modal
+    card.addEventListener('click', () => {
+      openSkillDetailModal(skill);
+    });
 
-    const btn = card.querySelector(`#btn-copy-${skill.id}`);
-    const cmdText = card.querySelector(`#cmd-${skill.id}`);
-    if (btn && cmdText) {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        
-        let tooltip = card.querySelector('.tooltip');
-        if (!tooltip) {
-          tooltip = document.createElement('span');
-          tooltip.className = 'tooltip';
-          tooltip.textContent = (dict && dict["terminal.copySuccess"]) ? dict["terminal.copySuccess"] : 'Copied';
-          card.querySelector('.skill-install').appendChild(tooltip);
-        }
-        
-        copyToClipboard(cmdText.textContent, tooltip);
-      });
+    container.appendChild(card);
+  });
+}
+
+function initMarketplaceModal() {
+  const modal = document.getElementById('skill-detail-modal');
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector('.modal-close-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
     }
   });
 }
+
+function openSkillDetailModal(skill) {
+  const modal = document.getElementById('skill-detail-modal');
+  if (!modal) return;
+
+  const dict = locales[currentLang] || locales['en'];
+
+  // Fill in textual content
+  modal.querySelector('.modal-skill-name').textContent = skill.name;
+  
+  // Category translation
+  let catText = skill.category;
+  if (skill.category === 'finance') catText = dict['skills.filter.finance'] || 'Finance';
+  else if (skill.category === 'communication') catText = dict['skills.filter.communication'] || 'Communication';
+  else if (skill.category === 'home_automation') catText = dict['skills.filter.home_automation'] || 'Smart Home';
+
+  const metaContainer = modal.querySelector('.modal-skill-meta');
+  if (metaContainer) {
+    const distText = translateDistribution(skill.distribution, dict);
+    let distBg = 'rgba(124, 58, 237, 0.1)';
+    let distColor = 'var(--accent)';
+    if (skill.distribution === 'hosted') {
+      distBg = 'rgba(16, 185, 129, 0.1)';
+      distColor = '#10b981';
+    } else if (skill.distribution === 'commercial') {
+      distBg = 'rgba(245, 158, 11, 0.1)';
+      distColor = '#f59e0b';
+    }
+    
+    metaContainer.innerHTML = `
+      <span class="modal-skill-version">${skill.version}</span>
+      <span class="modal-skill-author">By ${skill.author || 'QUARTIMES INC.'}</span>
+      <span class="modal-skill-category">${catText}</span>
+      <span class="modal-skill-stars" style="color: #f59e0b; margin-left: 8px;">⭐ ${skill.stars || 0}</span>
+      <span class="modal-skill-downloads" style="margin-left: 8px;">📥 ${formatDownloads(skill.downloads || 0)}</span>
+      <span class="modal-skill-distribution" style="margin-left: 8px; padding: 2px 6px; border-radius: 4px; background: ${distBg}; color: ${distColor}; font-weight: 600; font-size: 11px;">${distText}</span>
+    `;
+  }
+
+  const descKey = `skills.${skill.id}.desc`;
+  const localizedDesc = (dict && dict[descKey]) ? dict[descKey] : (skill.description || '');
+  modal.querySelector('.modal-skill-description').textContent = localizedDesc;
+
+  // Render Permissions list
+  const permList = modal.querySelector('.modal-permissions-list');
+  permList.innerHTML = '';
+  if (skill.permissions && skill.permissions.length > 0) {
+    skill.permissions.forEach(perm => {
+      const badge = document.createElement('div');
+      if (perm === 'network_access') {
+        badge.className = 'permission-badge warning';
+        const label = dict['permission.network_access'] || 'Network Access';
+        badge.innerHTML = `⚠️ ${label}`;
+      } else if (perm === 'local_storage') {
+        badge.className = 'permission-badge info';
+        const label = dict['permission.local_storage'] || 'Local Storage';
+        badge.innerHTML = `💾 ${label}`;
+      } else {
+        badge.className = 'permission-badge info';
+        badge.innerHTML = `⚙️ ${perm}`;
+      }
+      permList.appendChild(badge);
+    });
+    modal.querySelector('.modal-permissions-section').style.display = 'block';
+  } else {
+    modal.querySelector('.modal-permissions-section').style.display = 'none';
+  }
+
+  // Render Env variables
+  const envList = modal.querySelector('.modal-env-list');
+  envList.innerHTML = '';
+  if (skill.envConfig && skill.envConfig.length > 0) {
+    skill.envConfig.forEach(env => {
+      const item = document.createElement('div');
+      item.className = 'env-config-item';
+      
+      const keySpan = document.createElement('span');
+      keySpan.className = 'env-key';
+      keySpan.innerHTML = `${env.key} ${env.required ? '<span class="env-required-dot">*</span>' : ''}`;
+      
+      const descSpan = document.createElement('span');
+      descSpan.className = 'env-desc';
+      descSpan.textContent = `[${env.type}] - ${env.description}`;
+      
+      item.appendChild(keySpan);
+      item.appendChild(descSpan);
+      envList.appendChild(item);
+    });
+    modal.querySelector('.modal-env-section').style.display = 'block';
+  } else {
+    modal.querySelector('.modal-env-section').style.display = 'none';
+  }
+
+  // Update guide translations dynamically
+  const guideTitle = modal.querySelector('.modal-install-guide strong');
+  const guideDesc = modal.querySelector('.modal-install-guide p');
+  if (guideTitle && guideDesc) {
+    guideTitle.textContent = dict["modal.install_guide_title"] || "如何安裝此技能？";
+    guideDesc.textContent = dict["modal.install_guide_desc"] || "本市集僅供功能展示與環境配置參考。如需安裝，請啟動您的 ButlerCrab 用戶端，至「設定」 > 「技能市集」中搜尋此技能並點擊一鍵安裝。";
+  }
+
+  // Fetch Readme URL
+  const readmeContent = modal.querySelector('.modal-readme-content');
+  readmeContent.innerHTML = 'Loading...';
+  if (skill.readmeUrl) {
+    let url = skill.readmeUrl;
+    // If the language is Traditional Chinese, try to load the Chinese version (README.zh-TW.md)
+    if (currentLang === 'zh-TW') {
+      url = url.replace('README.md', 'README.zh-TW.md');
+    }
+    
+    fetch(url)
+      .then(res => {
+        if (!res.ok) {
+          // If the Chinese fetch fails, fallback to the default (English README.md)
+          if (url !== skill.readmeUrl) {
+            return fetch(skill.readmeUrl).then(r => {
+              if (!r.ok) throw new Error();
+              return r.text();
+            });
+          }
+          throw new Error();
+        }
+        return res.text();
+      })
+      .then(md => {
+        readmeContent.innerHTML = parseMarkdown(md);
+      })
+      .catch(() => {
+        const isZh = (currentLang === 'zh-TW' || currentLang === 'zh-CN');
+        const fallbackDoc = isZh ? `
+          <h1>${skill.name}</h1>
+          <p>本模組提供 ${skill.name} 的本地安全整合與執行能力。</p>
+          <h2>安裝步驟</h2>
+          <ul>
+            <li>本技能目前僅供展示與環境配置參考。</li>
+            <li>請啟動您的 ButlerCrab 用戶端，進入「設定」 &gt; 「技能市集」。</li>
+            <li>搜尋並點擊安裝此技能以開始使用。</li>
+          </ul>
+        ` : `
+          <h1>${skill.name}</h1>
+          <p>This module provides local secure integration and execution capabilities for ${skill.name}.</p>
+          <h2>Installation Steps</h2>
+          <ul>
+            <li>This skill is currently for showcase and configuration demonstration only.</li>
+            <li>Please launch your ButlerCrab client, and navigate to "Settings" &gt; "Marketplace".</li>
+            <li>Search for this skill and click install to start using it.</li>
+          </ul>
+        `;
+        readmeContent.innerHTML = fallbackDoc;
+      });
+  } else {
+    readmeContent.innerHTML = currentLang === 'zh-TW' ? '<p>本技能暫無說明文件</p>' : '<p>No documentation available for this skill.</p>';
+  }
+
+  // Open Modal
+  modal.classList.add('active');
+}
+
+function parseMarkdown(md) {
+  if (!md) return '';
+  let html = md;
+  // Escape HTML tags to prevent XSS
+  html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  // Replace bold
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Replace lists
+  html = html.replace(/^\s*-\s+(.*?)$/gm, '<li>$1</li>');
+  html = html.replace(/(<li>.*?<\/li>)+/gs, '<ul>$&</ul>');
+  // Replace code blocks
+  html = html.replace(/```(.*?)\n(.*?)```/gs, '<pre><code>$2</code></pre>');
+  html = html.replace(/`(.*?)`/g, '<code>$1</code>');
+  // Replace headers
+  html = html.replace(/^\s*#\s+(.*?)$/gm, '<h1>$1</h1>');
+  html = html.replace(/^\s*##\s+(.*?)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^\s*###\s+(.*?)$/gm, '<h3>$1</h3>');
+  // Replace paragraphs (double newlines)
+  html = html.replace(/\n\n(?!<h|<ul|<li|<pre)(.*?)(?=\n\n|$)/g, '<p>$1</p>');
+  return html;
+}
+

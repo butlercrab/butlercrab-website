@@ -1,46 +1,153 @@
 {
+  "version": "1.0.0",
+  "lastUpdated": "2026-06-20T11:45:00Z",
   "skills": [
     {
-      "id": "gmail_connector",
-      "name": "Gmail Connector",
-      "version": "v1.1.2",
-      "description": "本機整合 Google Mail API，支援自動分類信件、起草回覆與排程發信，保有安全憑證隔離。",
-      "installCmd": "crab install gmail"
+      "id": "einvoice_tracker",
+      "name": "einvoice_tracker",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "讀取財政部電子發票，進行家庭記帳。",
+      "installCmd": "crab install einvoice_tracker",
+      "category": "finance",
+      "distribution": "hosted",
+      "stars": 89,
+      "downloads": 2310,
+      "permissions": [
+        "local_storage",
+        "network_access"
+      ],
+      "envConfig": [
+        {
+          "key": "E_INVOICE_API_KEY",
+          "required": true,
+          "type": "string",
+          "description": "台灣電子發票 API 金鑰"
+        }
+      ],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/einvoice_tracker/README.md",
+      "checksum": "sha256-mockchecksumforeinvoice_tracker1234567890abcdef"
     },
     {
-      "id": "scheduler_pro",
-      "name": "Scheduler Pro",
-      "version": "v1.0.0",
-      "description": "解鎖複雜 DAG 任務工作流排程。支援多步驟錯誤重試、變數鏈傳遞與事件驅動監聽器。",
-      "installCmd": "crab install scheduler-pro"
+      "id": "notify",
+      "name": "notify",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "Allows the Agent to proactively push messages or notifications to the user's messaging channels (e.g., Telegram, LINE).",
+      "installCmd": "crab install notify",
+      "category": "communication",
+      "distribution": "bundled",
+      "stars": 342,
+      "downloads": 12450,
+      "permissions": [
+        "local_storage",
+        "network_access"
+      ],
+      "envConfig": [
+        {
+          "key": "TELEGRAM_BOT_TOKEN",
+          "required": false,
+          "type": "string",
+          "description": "Telegram 機器人 Token (發送通知用)"
+        }
+      ],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/notify/README.md",
+      "checksum": "sha256-mockchecksumfornotify1234567890abcdef"
     },
     {
-      "id": "smart_home_link",
-      "name": "Smart Home Link",
-      "version": "v0.9.8",
-      "description": "對接本機 Home Assistant 平台，支援利用對話控制智慧家電，並依據排程自動執行場景。",
-      "installCmd": "crab install smart-home"
+      "id": "polymarket_private_client",
+      "name": "polymarket_private_client",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "使用 Polymarket 官方 Python SDK 進行實彈交易與帳戶管理。支援限價/市價下單、取消訂單、以及查詢錢包持倉。此工具需在 Settings > Skill Secrets 中設定 POLYMARKET_PRIVATE_KEY（錢包私鑰）方可使用。",
+      "installCmd": "crab install polymarket_private_client",
+      "category": "finance",
+      "distribution": "commercial",
+      "stars": 96,
+      "downloads": 1120,
+      "permissions": [
+        "local_storage",
+        "network_access"
+      ],
+      "envConfig": [
+        {
+          "key": "POLYMARKET_API_KEY",
+          "required": true,
+          "type": "string",
+          "description": "Polymarket API 金鑰"
+        },
+        {
+          "key": "POLYMARKET_PRIVATE_KEY",
+          "required": true,
+          "type": "string",
+          "description": "Polymarket 私鑰"
+        }
+      ],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/polymarket_private_client/README.md",
+      "checksum": "sha256-mockchecksumforpolymarket_private_client1234567890abcdef"
     },
     {
-      "id": "calendar_sync",
-      "name": "Calendar Sync",
-      "version": "v1.0.5",
-      "description": "串接 Google 日曆與 Outlook 日曆，自動同步日程並能透過 RAG 提供會前背景簡報。",
-      "installCmd": "crab install calendar"
+      "id": "polymarket_public_client",
+      "name": "polymarket_public_client",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "讀取 Polymarket 預測市場的公開數據（包含搜尋熱門市場、查詢即時中值價格與獲取限價單簿深度）。當需要獲取 Polymarket 資訊進行分析或模擬交易時，必須且僅能調用此工具！",
+      "installCmd": "crab install polymarket_public_client",
+      "category": "finance",
+      "distribution": "commercial",
+      "stars": 78,
+      "downloads": 1850,
+      "permissions": [
+        "local_storage",
+        "network_access"
+      ],
+      "envConfig": [],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/polymarket_public_client/README.md",
+      "checksum": "sha256-mockchecksumforpolymarket_public_client1234567890abcdef"
     },
     {
-      "id": "local_vision",
-      "name": "Local Vision Analyzer",
-      "version": "v0.8.2",
-      "description": "調用本機相機進行 YOLO 目標偵測與即時影像辨識，並將事件推送至排程核心執行反應動作。",
-      "installCmd": "crab install vision"
+      "id": "taiwan_stock",
+      "name": "taiwan_stock",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "查詢台灣上市櫃股票之最新與歷史收盤行情、股價與基本交易資訊（僅限於資料獲取）。請注意：本工具僅提供原始數據獲取，不具備分析與評估能力。若使用者詢問任何關於個股買賣評估、是否要買進/賣出、或模擬交易價格規劃，你作為總協調者必須且只能調用 `call_tw_stock_expert` 工具委派給專家分身，絕不可直接調用本工具自行回答！",
+      "installCmd": "crab install taiwan_stock",
+      "category": "finance",
+      "distribution": "hosted",
+      "stars": 215,
+      "downloads": 8740,
+      "permissions": [
+        "local_storage",
+        "network_access"
+      ],
+      "envConfig": [
+        {
+          "key": "FINMIND_API_TOKEN",
+          "required": false,
+          "type": "string",
+          "description": "FinMind API 金鑰 (選填)"
+        }
+      ],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/taiwan_stock/README.md",
+      "checksum": "sha256-mockchecksumfortaiwan_stock1234567890abcdef"
     },
     {
-      "id": "system_terminal",
-      "name": "Terminal Controller",
-      "version": "v1.0.2",
-      "description": "允許 Agent 在本機安全沙盒內執行終端機指令，執行打包、專案建置與日常檔案管理任務。",
-      "installCmd": "crab install terminal"
+      "id": "yolo_config",
+      "name": "yolo_config",
+      "version": "1.0.0",
+      "author": "QUARTIMES INC.",
+      "description": "Manage YOLO edge computer vision model configuration scales (nano, small, medium, large).",
+      "installCmd": "crab install yolo_config",
+      "category": "home_automation",
+      "distribution": "bundled",
+      "stars": 128,
+      "downloads": 4820,
+      "permissions": [
+        "local_storage"
+      ],
+      "envConfig": [],
+      "readmeUrl": "https://raw.githubusercontent.com/butlercrab/skills/main/yolo_config/README.md",
+      "checksum": "sha256-mockchecksumforyolo_config1234567890abcdef"
     }
   ]
 }
